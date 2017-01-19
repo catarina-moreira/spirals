@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Logarithmic Spiral</title>
+		<script src="three.js"></script>
+		<script src="functions.js"></script>
+		<script src="js/renderers/Projector.js"></script>
+		<script src="js/renderers/CanvasRenderer.js"></script>
+		<script src="js/libs/stats.min.js"></script>
+
+		<style>
+			body {
+				background-color: #000000;
+				overflow: hidden;
+				color: white;
+
+				margin-top: 50px;
+    			margin-bottom: 100px;
+    			margin-right: 50px;
+    			margin-left: 50px;
+			}
+
+			a {
+				color: white;
+				link: white;
+				hover: white;
+			}
+			footer { 
+    			display: block;
+			}
+		</style>
+
+	</head>
+	
+	<body>
+		
+		<h1>Logarithmic Spiral</h1>
+		<p><b>Author:</b> <a href="http://web.ist.utl.pt/~catarina.p.moreira/index.html" target="_blank">Catarina Moreira</a></p>
+		<p><b>Contact:</b> catarina.p.moreira@tecnico.ulisboa.pt</p>
+		<table>
+			<tr><td></td><td></td></tr>
+			
+			<tr>
+				<td>Number of Spheres</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>Angle (Golden Angle = 1.618)</td>
+			</tr>
+
+			
+
+			<tr>
+				<td><input type="text" name="spheres" value="100" id="SPHERES_ID"></td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td><input type="text" name="angle" value="1.618" id="ANGLE_ID"></td>
+			</tr>
+			<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+			<tr>
+				<td>Even Numbers?</td>
+				<td>Prime Numbers?</td>
+				<td>&nbsp;</td>
+				<td>Fibonacci Sequence?</td>
+			</tr>
+
+			<tr>
+
+				<td><select name="even" id="EVEN_ID">
+						<option value="No">No</option>
+  						<option value="Yes">Yes</option>
+					</select>
+				</td>
+
+				<td><select name="prime" id="PRIME_ID">
+						<option value="No">No</option>
+  						<option value="Yes">Yes</option>
+					</select>
+				</td>
+				<td>&nbsp;</td>
+				<td><select name="fib" id="FIB_ID">
+						<option value="No">No</option>
+  						<option value="Yes">Yes</option>
+					</select>
+				</td>
+			</tr>
+			
+
+			<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+			<tr>
+				<td>
+					<button onclick="draw()" type="submit" >Generate</button>
+				</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+
+
+	</body>
+
+</html>
