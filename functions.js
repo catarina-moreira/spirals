@@ -98,15 +98,27 @@ function generateSpiral( radius, angle, numSpheres, testPrime, testEven, testFib
 	// Angle to be incremented in each iteration
 	Theta = 0;
 
+	var sphere = newSphere( radius );
+
+	// Apply Polar coordinates:
+	// distFromCenter = | r | 
+	var distFromCenter = Math.sqrt( 1 );
+
+	// X = | r | Cos( θ ); Z = | r | Sin( θ )
+	sphere.position.x = distFromCenter*Math.cos(Theta*RadConv)*9 - offSet;
+	sphere.position.z = distFromCenter*Math.sin(Theta*RadConv)*9 - offSet;
+
+	scene.add( sphere );
+
 	// generate numSpheres spheres and update their positions
 	for ( var ID = 0; ID < numSpheres; ID ++ ) 
 	{
 		// genetate a new Sphere
-		var sphere = newSphere( radius );
+		sphere = newSphere( radius );
 
 		// Apply Polar coordinates:
 		// distFromCenter = | r | 
-		var distFromCenter = Math.sqrt( ID );
+		distFromCenter = Math.sqrt( ID );
 
 		// X = | r | Cos( θ ); Z = | r | Sin( θ )
 		sphere.position.x = distFromCenter*Math.cos(Theta*RadConv)*9 - offSet;
